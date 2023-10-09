@@ -1,3 +1,16 @@
+import mysql.connector
+
+# Establish a connection to the MySQL database
+db_connection = mysql.connector.connect(
+    host="your_host",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+
+
+
 import sqlite3
 
 
