@@ -9,17 +9,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.7,3.8,3.10.x,3.11]
+    # strategy:
+    #   matrix:
+    #     python-version: [3.7,3.8,3.10.x,3.11]
  
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: set up environment variables
+      # - name: Set up Python
+      #   uses: actions/setup-python@v4
+      #   with:
+      #     python-version: ${{ matrix.python-version }}
+      - name: Set up Secrets
         run: |
           echo "DATABRICKS_HOST=${{ secrets.SERVER_HOSTNAME }}" >> $GITHUB_ENV
           echo "DATABRICKS_HTTP_PATH=${{  secrets.HTTP_PATH }}" >> $GITHUB_ENV
