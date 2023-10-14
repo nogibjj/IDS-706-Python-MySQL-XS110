@@ -3,7 +3,7 @@ from unittest.mock import patch
 import main
 
 
-class Testrun_query(unittest.TestCase):
+class Test_run_query(unittest.TestCase):
     @patch("builtins.print")  # Mock the print function to capture output
     def test_run_query(self, mock_print):
 
