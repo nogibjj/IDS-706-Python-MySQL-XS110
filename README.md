@@ -96,7 +96,7 @@ This query joined two tables: orders and customers on custermer id, then  retrie
 
 ### 1. successful database operations
 
-![Alt text](image/image1 .png)
+![Alt text](image/image1.png)
 
 ### 2. passed all tests
 ![Alt text](image/image2.png)
