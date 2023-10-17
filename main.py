@@ -6,6 +6,7 @@ from tabulate import tabulate
 # Load environment variables from .env
 load_dotenv()
 
+
 def run_query():
     try:
         # Replace with your environment variables or provide the actual values
@@ -17,7 +18,7 @@ def run_query():
         with sql.connect(
             server_hostname=server_hostname,
             http_path=http_path,
-            access_token=access_token
+            access_token=access_token,
         ) as connection:
             # Create a cursor
             with connection.cursor() as cursor:
@@ -37,7 +38,6 @@ def run_query():
                 # Fetch the result
                 result = cursor.fetchall()
 
-
                 # Print the result as a table
                 headers = ["Customer Name", "Order Number"]
                 table = tabulate(result, headers=headers, tablefmt="pretty")
@@ -55,8 +55,6 @@ def run_query():
         except NameError:
             # Handle the case where the cursor or connection was not defined
             pass
-
-
 
 
 if __name__ == "__main__":
