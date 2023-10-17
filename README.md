@@ -15,6 +15,14 @@ To connect with Databricks, I did the following steps:
 
 3. Get a Databricks personal access token for the workspace.
 
+I created a .env file
+
+```
+DATABRICKS_HOST='adb-xxxx'
+DATABRICKS_HTTP_PATH='/sql/xxx'
+DATABRICKS_TOKEN = 'dapxxx'
+```
+Then we can use environment variables.
 
 ### 2. Update requirements.txt:
 ``` 
